@@ -1,7 +1,7 @@
 {
     "name": "gilzow/wpdirauth",
     "description": "WordPress Directory Authentication",
-    "type": "library",
+    "type": "wordpress-plugin",
     "require-dev": {
         "phpcsstandards/phpcsutils": "^1.0@dev",
         "phpcompatibility/php-compatibility": "dev-develop"
