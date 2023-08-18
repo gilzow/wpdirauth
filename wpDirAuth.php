@@ -1822,7 +1822,13 @@ ________EOS;
             $arySiteMsgParts[] = sprintf($strSiteMessage,$arySiteData['role'],$arySiteData['siteurl'],$arySiteData['blogname']);
         }
 
-        return sprintf($strMsg,$strUserID,$strSSOID,implode($arySiteMsgParts,', '),$strExtraMsg);
+        if (PHP_VERSION_ID < 70400) {
+            $strMultisiteMsg = implode($arySiteMsgParts,', ');
+        } else {
+            $strMultisiteMsg = implode(', ', $arySiteMsgParts);
+        }
+
+        return sprintf($strMsg,$strUserID,$strSSOID,$strMultisiteMsg,$strExtraMsg);
     }
 
     /**
