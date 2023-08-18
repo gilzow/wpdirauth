@@ -1,0 +1,20 @@
+{
+    "name": "gilzow/wpdirauth",
+    "description": "WordPress Directory Authentication",
+    "type": "library",
+    "require-dev": {
+        "phpcsstandards/phpcsutils": "^1.0@dev",
+        "phpcompatibility/php-compatibility": "dev-develop"
+    },
+    "authors": [
+        {
+            "name": "Paul Gilzow",
+            "email": "paul.gilzow@platform.sh"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
