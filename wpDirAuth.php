@@ -1188,9 +1188,9 @@ ________EOS;
      */
     function wpDirAuth_hidePassFields()
     {
-        global $profileuser, $userdata;
+        global $user_id, $userdata;
 
-        $editUserIsDirUser = get_user_meta($profileuser->ID, 'wpDirAuthFlag',true);
+        $editUserIsDirUser = get_user_meta($user_id, 'wpDirAuthFlag',true);
 
         if (!$editUserIsDirUser) {
             return true;
@@ -1207,8 +1207,8 @@ ________EOS;
 
             if (get_site_option('dirAuthTOS')) {
                 // TOS option is ON
-                if (($TOSDate = get_user_meta($profileuser->ID, 'wpDirAuthTOS', true)) === '') {
-                    if ($userdata->ID == $profileuser->ID) {
+                if (($TOSDate = get_user_meta($user_id, 'wpDirAuthTOS', true)) === '') {
+                    if ($userdata->ID === $user_id) {
                         // Only show TOS acceptance checkbox to the owner of the profile.
                         $message .= '</p><p class="desc">'
                                     .  '<input type="checkbox" name="wpDirAuthTOS" value="1" style="width:15px; height:15px;" /> '
