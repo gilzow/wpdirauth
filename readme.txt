@@ -3,7 +3,7 @@ Contributors: gilzow, stephdau, apokalyptik
 Tags: login, authentication, directory, ldap, ldaps
 Requires at least: 2.2
 Tested up to: 6.3
-Stable tag: 1.10.6
+Stable tag: 1.10.7
 WordPress directory authentication plugin through LDAP and LDAPS (SSL).
 == Description ==
 Please see the Changelog (Development tab above) for recent updates/changes.
@@ -69,6 +69,8 @@ In other words, a classic case of `pimp my lib'` (hopefully for the better).
 * wpLDAP Patch: <https://web.archive.org/web/20100731020249/http://www.pkrinternet.com/~rbulling/private/wpLDAP-1.02-ssl.patch>
 
 == Changelog ==
+= 1.10.7 =
++ Bug fix: Corrects an issue with parameter order with implode() for users on PHP v8.0 and above. Apologies for two updates in one day. Big shoutout to https://www.forumsys.com/ for providing a publicly accessible LDAP instance for testing purposes.
 = 1.10.6 =
 + Bug Fix: Reset Password button was showing up in ad-authenticated users' profile due to a removed global variable, that was removed starting at WordPress v6. Huge shout-out to user @silsbyc for assisting me in troubleshooting this one.
 = 1.10.5 =
