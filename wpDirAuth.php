@@ -874,13 +874,13 @@ ____________EOS;
         }
 
         $strPHPWarn = '';
-        if(version_compare( PHP_VERSION, '5.3', '<' )){
+        if(version_compare( PHP_VERSION, '8.0.0', '<' )){
             $strPHPWarn = <<<____PHPWARN
             <div class="error">
-                <h3>PHP 5.2.X WARNING</h3>
-                <p>Unfortunately, trying to support newer versions of PHP (the upcoming release of 7.2) as well as older version of PHP has become unsustainable. As of wpDirAuth version 2.0
-                 I will no longer be able to support versions of PHP less than 5.3.X.  I feel an obligation to strongly suggest you upgrade your PHP install considering 5.2 was released
-                 eleven years ago and has been without support for over six years.
+                <h3>PHP 7.4.X WARNING</h3>
+                <p>Unfortunately, trying to support newer versions of PHP (the upcoming release of 8.3) as well as older version of PHP has become unsustainable. As of wpDirAuth version 2.0
+                 I will no longer be able to support versions of PHP less than 8.0.0.  I feel an obligation to strongly suggest you upgrade your PHP install considering 7.4 reached end-of-life
+                 almost two years ago. If you are still using this plugin with an older version of PHP, please contact me at wpdirauth@gilzow.com to discuss options.
             </div>
 ____PHPWARN;
 
